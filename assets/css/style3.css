@@ -1,0 +1,24 @@
+
+.article{
+  padding:6px 0 6px 0;
+  font:Bold 13px Arial;
+  background:#EB6864;
+  color:#fff;
+  width:90px;
+  border-radius:2px;
+  border:none;
+
+}
+.articleImg{
+  margin-left: auto;
+  margin-right: auto;
+}
+.line button{
+    margin-bottom: 30px;
+}
+.articleImg{
+  margin-bottom: 10px;
+}
+.line p{
+  text-align: center;
+}
