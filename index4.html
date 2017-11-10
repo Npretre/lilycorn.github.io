@@ -21,39 +21,67 @@
       <div class="container">
         <ul class="nav nav-tabs">
   <li class="active"><a href="#home" data-toggle="tab">Accueil</a></li>
-  <li><a href="#profile" data-toggle="tab">Cuisine</a></li>
-  <li><a href="#profile" data-toggle="tab">Salle de bains</a></li>
-  <li><a href="#profile" data-toggle="tab">Goodies</a></li>
-  <li><a href="#profile" data-toggle="tab">High-tech</a></li>
-  <li><a href="#profile" data-toggle="tab">Jouets</a></li>
-  <li><a href="#profile" data-toggle="tab">Chambre</a></li>
-  <li><a href="#profile" data-toggle="tab">Décorations</a></li>
-  <li><a href="#profile" data-toggle="tab">Papeterie</a></li>
+  <li><a href="#kitchen" data-toggle="tab">Cuisine</a></li>
+  <li><a href="#bathroom" data-toggle="tab">Salle de bains</a></li>
+  <li><a href="#goodies" data-toggle="tab">Goodies</a></li>
+  <li><a href="#hightech" data-toggle="tab">High-tech</a></li>
+  <li><a href="#toys" data-toggle="tab">Jouets</a></li>
+  <li><a href="#bedroom" data-toggle="tab">Chambre</a></li>
+  <li><a href="#deco" data-toggle="tab">Décorations</a></li>
+  <li><a href="#paper" data-toggle="tab">Papeterie</a></li>
   <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
       Mon Compte <span class="caret"></span>
     </a>
     <ul class="dropdown-menu">
-      <li><a href="#dropdown1" data-toggle="tab">Panier</a></li>
+      <li><a href="#" data-toggle="modal" data-target="#myCart">Panier</a></li>
       <li class="divider"></li>
-      <li><a href="#dropdown2" data-toggle="tab">Préférences</a></li>
+      <li><a href="#account" data-toggle="tab">Préférences</a></li>
     </ul>
   </li>
 </ul>
+
+
+<div class="row">
+  <div class="modal fade" id="myCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Mon panier</h4>
+        </div>
+        <div class="modal-body">
+
+          <p id="plop">J'aime le pomes</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+          <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade active in" id="home">
-    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+    <p id="price" data-value="800"> Prix : 800</p>
+    <button onclick="addCards()">Add</button>
+    <p id="plop">J'aime le pomes</p>
   </div>
-  <div class="tab-pane fade" id="profile">
-    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
-  </div>
-  <div class="tab-pane fade" id="dropdown1">
+  <div class="tab-pane fade" id="kitchen">
+    <p id="price1" data-value="500"> Prix : 500</p>
+    <button onclick="addCards1()">Add</button>
+    </div>
+  <div class="tab-pane fade" id="cart">
     <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
   </div>
-  <div class="tab-pane fade" id="dropdown2">
+  <div class="tab-pane fade" id="account">
     <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
   </div>
 </div>
+
         <!--/.nav-collapse -->
       </div>
     <!-- /.container -->
@@ -62,5 +90,20 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.js"></script>
+    <script>
+    var price = $('#price').attr('data-value');
+    var price1 = $('#price1').attr('data-value');
+    var i=0;
+    function addCards(){
+      i++;
+      document.getElementById('plop').innerHTML=+i*price;
+
+    }
+    function addCards1(){
+      i++;
+      document.getElementById('plop').innerHTML=i*price1;
+
+    }
+    </script>
   </body>
 </html>
