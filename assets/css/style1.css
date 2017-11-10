@@ -1,0 +1,17 @@
+.contenu {
+  min-height: 800px;
+}
+.bottomDiv {
+  background-color: #b95353;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.bottomDiv p {
+  color: white;
+  font-size: 20px;
+  text-decoration: underline;
+}
+.bottomDiv a {
+  color: white;
+  font-family: georgia sans-serif;
+}
