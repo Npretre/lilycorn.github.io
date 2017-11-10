@@ -21,25 +21,28 @@
 .line p{
   text-align: center;
 }
-.modalContent {
+.modal-content {
   margin: 0;
   padding: 10px;
-  margin: auto;
+  width: 600px;
+  height: 492px;
   display: block;
   text-align: center;
 }
-.modalContent ul{
+.modal-content ul{
   padding-left: 0;
 }
-.modalContent li{
+.modal-content li{
   margin: 0;
   list-style-type: none;
 }
 .quantityPlus , .quantityLess, .addButton{
-  width:auto;
-  height:auto;
   background: linear-gradient(33deg,red,orange,yellow,green,blue,purple);
   color: white;
+}
+.modal-dialog.modal-lg{
+  width: 600px;
+  height: 492px;
 }
 h1 {
   position: absolute;

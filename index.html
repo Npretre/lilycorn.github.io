@@ -1,55 +1,2418 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-    <title>Lilycorn</title>
-    <!-- Bootstrap core CSS -->
-    <link href="assets/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <!-- CSS perso -->
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+  <title>Lilycorn</title>
+  <!-- Bootstrap core CSS -->
+  <link href="assets/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!-- CSS perso -->
+  <link rel="stylesheet" href="assets/css/style2.css">
+  <!-- Custom styles for this template -->
+  <link href="starter-template.css" rel="stylesheet">
+</head>
 
-  <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <!--/.nav-collapse -->
-      </div>
-    </nav>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index3.html"><h1 class="rainbow">Lilycorn</h1></a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">chambre</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+  <div class="container-fluid-fluid">
+    <div class="starter-template">
+      <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    </div>
+  </div>
+  <button class="btn btn-primary" data-toggle="modal" data-target=".bd-modal-lg">Panier</button>
+  <div class="modal fade bd-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div id="cart">
+          Panier
+        </div>
       </div>
     </div>
-    <!-- /.container -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="assets/libs/js/bootstrap.js"></script>
-  </body>
+  </div>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#room">Chambre</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#kitchen">Cuisine</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#bathRoom">Salle de bains</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#deco">Déco</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#highTech">High-Tech</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#toys">Jouets</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#stationery">Papeterie</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#goodies">Goodies</a>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+      </div>
+    </li>
+  </ul>
+  <div id="tabContent" class="tab-content">
+    <div class="tab-pane fade" id="room">
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/chambre/coussin.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".room1">
+            <div class="modal fade room1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lgRoom1">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/chambre/coussin.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="7.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Coussin</strong></li>
+                        <li> <div class="price">Prix: 7.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Coussin</p>
+          <p>7.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/chambre/chausson.png" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".room2">
+            <div class="modal fade room2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lgRoom2">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/chambre/chausson.png">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="8.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Chausson peluche</strong></li>
+                        <li> <div class="price">Prix: 8.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Chausson peluche</p>
+          <p>8.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/chambre/coussin2.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".room3">
+            <div class="modal fade room3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/chambre/coussin2.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="7.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Coussin en forme de licorne</strong></li>
+                        <li> <div class="price">Prix: 7.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Coussin en forme de licorne</p>
+          <p>7.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/chambre/housseCouette1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".room4">
+            <div class="modal fade room4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lgRoom4">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/chambre/housseCouette1.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="20.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Housse de couette</strong></li>
+                        <li> <div class="price">Prix: 20.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Housse de couette</p>
+          <p>20.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/chambre/peluche.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".room5">
+            <div class="modal fade room5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lgRoom5">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/chambre/peluche.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="15.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Peluche licorne Blanc & Or</strong></li>
+                        <li> <div class="price">Prix: 15.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Peluche licorne Blanc & Or</p>
+          <p>15.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/chambre/peluche2.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".room6">
+            <div class="modal fade room6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lgRoom6">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/chambre/peluche2.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="15.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Peluche Blanche & Rose</strong></li>
+                        <li> <div class="price">Prix: 15.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Peluche Blanche & Rose</p>
+          <p>15.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/chambre/peluche3.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".room7">
+            <div class="modal fade room7" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lgRoom7">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/chambre/peluche3.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="15.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Peluche Rose</strong></li>
+                        <li> <div class="price">Prix: 15.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Peluche Rose</p>
+          <p>15.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/chambre/veilleuse1.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".room8">
+            <div class="modal fade room8" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lgRoom8">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/chambre/veilleuse1.jpeg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="15.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Veilleuse</strong></li>
+                        <li> <div class="price">Prix: 15.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Veilleuse</p>
+          <p>15.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade in" id="kitchen">
+      <!-- Large modal -->
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/cuisine/boite1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen1">
+            <div class="modal fade kitchen1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/cuisine/boite1.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="6.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Boite à goûter</strong></li>
+                        <li> <div class="price">Prix: 6.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Boite à goûter</p>
+          <p>6.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/cuisine/bougieAnni.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen2">
+            <div class="modal fade kitchen2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/cuisine/bougieAnni.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="3.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Lot de 10 bougies d'anniversaire</strong></li>
+                        <li> <div class="price">Prix: 3.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Lot de 10 bougies d'anniversaire</p>
+          <p>3.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/cuisine/curedent.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen3">
+            <div class="modal fade kitchen3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/cuisine/curedent.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="4.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Cure dent x100</strong></li>
+                        <li> <div class="price">Prix: 4.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Cure dent x100</p>
+          <p>4.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/cuisine/mouleGateau1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen4">
+            <div class="modal fade kitchen4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/cuisine/mouleGateau1.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="12.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Moule à gâteau</strong></li>
+                        <li> <div class="price">Prix: 12.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Moule à gâteau</p>
+          <p>12.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/cuisine/mug2.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen5">
+            <div class="modal fade kitchen5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/cuisine/mug2.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="5.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Mug</strong></li>
+                        <li> <div class="price">Prix: 5.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Mug</p>
+          <p>5.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/cuisine/mug5.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen6">
+            <div class="modal fade kitchen6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/cuisine/mug5.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="5.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Mug en forme de licorne</strong></li>
+                        <li> <div class="price">Prix: 5.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Mug en forme de licorne</p>
+          <p>5.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/cuisine/mug6.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen7">
+            <div class="modal fade kitchen7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/cuisine/mug6.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="5.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Mug</strong></li>
+                        <li> <div class="price">Prix: 5.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Mug</p>
+          <p>5.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/cuisine/thermosMug.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen8">
+            <div class="modal fade kitchen8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/cuisine/thermosMug.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="7.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Mug thermos</strong></li>
+                        <li> <div class="price">Prix: 7.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Mug thermos</p>
+          <p>7.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="bathRoom">
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/salleDeBain/papierToilette.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom1">
+            <div class="modal fade bathRoom1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/salleDeBain/papierToilette.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="3.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Rouleau de papier toilette x2</strong></li>
+                        <li> <div class="price">Prix: 3.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Rouleau de papier toilette x2</p>
+          <p>3.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/salleDeBain/peignoir.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom2">
+            <div class="modal fade bathRoom2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/salleDeBain/peignoir.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="25.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Peignoir adulte</strong></li>
+                        <li> <div class="price">Prix: 25.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Peignoir adulte</p>
+          <p>25.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/salleDeBain/savon1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom3">
+            <div class="modal fade bathRoom3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/salleDeBain/savon1.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="3.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Savon orange & patchouli</strong></li>
+                        <li> <div class="price">Prix: 3.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Savon orange & patchouli</p>
+          <p>3.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/salleDeBain/savon2.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom4">
+            <div class="modal fade bathRoom4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/salleDeBain/savon2.jpeg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="3.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Savon enfant</strong></li>
+                        <li> <div class="price">Prix: 3.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Savon enfant</p>
+          <p>3.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/salleDeBain/savon3.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom5">
+            <div class="modal fade bathRoom5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/salleDeBain/savon3.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="4.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Gel douche onctueux</strong></li>
+                        <li> <div class="price">Prix: 4.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Gel douche onctueux</p>
+          <p>4.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/salleDeBain/serviette.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom6">
+            <div class="modal fade bathRoom6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/salleDeBain/serviette.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="15.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Serviette de plage enfant</strong></li>
+                        <li> <div class="price">Prix: 15.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Serviette de plage enfant</p>
+          <p>15.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/salleDeBain/serviette1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom7">
+            <div class="modal fade bathRoom7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/salleDeBain/serviette1.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="15.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Drap de bain</strong></li>
+                        <li> <div class="price">Prix: 15.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Drap de bain</p>
+          <p>15.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/salleDeBain/trousseMaquillage.png" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom8">
+            <div class="modal fade bathRoom8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/salleDeBain/trousseMaquillage.png">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="8.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Trousse à maquillage</strong></li>
+                        <li> <div class="price">Prix: 8.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Trousse à maquillage</p>
+          <p>8.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="deco">
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/deco/boogie.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco1">
+            <div class="modal fade deco1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/deco/bougie.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="6.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Bougie</strong></li>
+                        <li> <div class="price">Prix: 6.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Bougie</p>
+          <p>6.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/deco/lampe.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco2">
+            <div class="modal fade deco2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/deco/lampe.jpeg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="12.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Lampe de chevet</strong></li>
+                        <li> <div class="price">Prix: 12.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Lampe de chevet</p>
+          <p>12.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/deco/lampe1.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco3">
+            <div class="modal fade deco3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/deco/lampe1.jpeg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="10.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Tête de licorne lumineuse</strong></li>
+                        <li> <div class="price">Prix: 10.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Tête de licorne lumineuse</p>
+          <p>10.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/deco/noel.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco4">
+            <div class="modal fade deco4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/deco/noel.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="2.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Décoration de noël</strong></li>
+                        <li> <div class="price">Prix: 2.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Décoration de noël</p>
+          <p>2.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/deco/stickers.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco5">
+            <div class="modal fade deco5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/deco/stickers.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="9.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Stickers mural</strong></li>
+                        <li> <div class="price">Prix: 9.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Stickers mural</p>
+          <p>9.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/deco/trophe.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco6">
+            <div class="modal fade deco6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/deco/trophe.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="12.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Trophé en tissus</strong></li>
+                        <li> <div class="price">Prix: 12.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Trophé en tissus</p>
+          <p>12.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/deco/trophe1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco7">
+            <div class="modal fade deco7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/deco/trophe1.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="15.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Trophé peluche</strong></li>
+                        <li> <div class="price">Prix: 15.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Trophé peluche</p>
+          <p>15.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/deco/trophe2.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco8">
+            <div class="modal fade deco8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/deco/trophe2.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="20.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Trophé géométrique</strong></li>
+                        <li> <div class="price">Prix: 20.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Trophé géométrique</p>
+          <p>20.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="highTech">
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/highTech/cleUSB.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech1">
+            <div class="modal fade highTech1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/highTech/cleUSB.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="8.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Clé USB 8Go Rose</strong></li>
+                        <li> <div class="price">Prix: 8.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Clé USB 8Go Rose</p>
+          <p>8.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/highTech/cleUSB1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech2">
+            <div class="modal fade highTech2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/highTech/cleUSB1.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="8.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Clé USB 8Go Noir</strong></li>
+                        <li> <div class="price">Prix: 8.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Clé USB 8Go Noir</p>
+          <p>8.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/highTech/cleUSB2.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech3">
+            <div class="modal fade highTech3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/highTech/cleUSB2.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="8.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Clé USB 8Go</strong></li>
+                        <li> <div class="price">Prix: 8.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Clé USB 8Go</p>
+          <p>8.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/highTech/coqueTel.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech4">
+            <div class="modal fade highTech4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/highTech/coqueTel.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="7.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Coque de téléphone</strong></li>
+                        <li> <div class="price">Prix: 7.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Coque de téléphone</p>
+          <p>7.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/highTech/coqueTel1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech5">
+            <div class="modal fade highTech5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/highTech/coqueTel1.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="7.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Coque de téléphone</strong></li>
+                        <li> <div class="price">Prix: 7.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Coque de téléphone</p>
+          <p>7.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/highTech/disqueDur.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech6">
+            <div class="modal fade highTech6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/highTech/disqueDur.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="15.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Batterie externe</strong></li>
+                        <li> <div class="price">Prix: 15.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Batterie externe</p>
+          <p>15.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/highTech/ecouteur.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech7">
+            <div class="modal fade highTech7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/highTech/ecouteur.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="9.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Ecouteurs</strong></li>
+                        <li> <div class="price">Prix: 9.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Ecouteurs</p>
+          <p>9.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/highTech/enceinte.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech8">
+            <div class="modal fade highTech8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/highTech/enceinte.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="35.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Enceinte bluetooth</strong></li>
+                        <li> <div class="price">Prix: 35.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Enceinte bluetooth</p>
+          <p>35.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="toys">
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/Jouets/bouee.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys1">
+            <div class="modal fade toys1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/Jouets/bouee.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="10.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Bouée enfant</strong></li>
+                        <li> <div class="price">Prix: 10.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Bouée enfant</p>
+          <p>10.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/Jouets/bouee1.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys2">
+            <div class="modal fade toys2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/Jouets/bouee1.jpeg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="10.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Bouée enfant</strong></li>
+                        <li> <div class="price">Prix: 10.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Bouée enfant</p>
+          <p>10.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/Jouets/boueeGeante.png" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys3">
+            <div class="modal fade toys3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/Jouets/boueeGeante.png">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="15.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Bouée Géante</strong></li>
+                        <li> <div class="price">Prix: 15.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Bouée Géante</p>
+          <p>15.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/Jouets/deguisement.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys4">
+            <div class="modal fade toys4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/Jouets/deguisement.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="30.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Déguisement adulte</strong></li>
+                        <li> <div class="price">Prix: 30.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Déguisement adulte</p>
+          <p>30.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/Jouets/deguisement1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys5">
+            <div class="modal fade toys5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/Jouets/deguisement1.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="25.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Déguisement pyjama</strong></li>
+                        <li> <div class="price">Prix: 25.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Déguisement pyjama</p>
+          <p>25.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/Jouets/jouetDeBain.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys6">
+            <div class="modal fade toys6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/Jouets/jouetDeBain.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="3.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Licorne de bain</strong></li>
+                        <li> <div class="price">Prix: 3.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Licorne de bain</p>
+          <p>3.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/Jouets/masque.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys7">
+            <div class="modal fade toys7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/Jouets/masque.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="10.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Masque</strong></li>
+                        <li> <div class="price">Prix: 10.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Masque</p>
+          <p>10.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/Jouets/serreTete.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys8">
+            <div class="modal fade toys8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/Jouets/serreTete.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="5.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Serre-tête</strong></li>
+                        <li> <div class="price">Prix: 5.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Serre-tête</p>
+          <p>5.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="stationery">
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/papeterie/crayon.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery1">
+            <div class="modal fade stationery1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/papeterie/crayon.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="10.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Crayons de couleur</strong></li>
+                        <li> <div class="price">Prix: 10.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Crayons de couleur</p>
+          <p>10.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/papeterie/papeterie.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery2">
+            <div class="modal fade stationery2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/papeterie/papeterie.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="7.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Fourniture enfant</strong></li>
+                        <li> <div class="price">Prix: 7.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Fourniture enfant</p>
+          <p>7.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/papeterie/perforatrice.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery3">
+            <div class="modal fade stationery3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/papeterie/perforatrice.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="5.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Perforatrice</strong></li>
+                        <li> <div class="price">Prix: 5.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Perforatrice</p>
+          <p>5.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/papeterie/scotch.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery4">
+            <div class="modal fade stationery4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/papeterie/scotch.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="8.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Dérouleur de scotch</strong></li>
+                        <li> <div class="price">Prix: 8.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Dérouleur de scotch</p>
+          <p>8.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/papeterie/stylo.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery5">
+            <div class="modal fade stationery5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/papeterie/stylo.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="3.50" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Stylo</strong></li>
+                        <li> <div class="price">Prix: 3.50€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Stylo</p>
+          <p>3.50€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/papeterie/stylo1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery6">
+            <div class="modal fade stationery6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/papeterie/stylo1.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="3.50" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Stylo</strong></li>
+                        <li> <div class="price">Prix: 3.50€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Stylo</p>
+          <p>3.50€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/papeterie/stylo2.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery7">
+            <div class="modal fade stationery7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/papeterie/stylo2.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="2.50" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Stylo</strong></li>
+                        <li> <div class="price">Prix: 2.50€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Stylo</p>
+          <p>2.50€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/papeterie/trousse.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery8">
+            <div class="modal fade stationery8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/papeterie/trousse.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="7.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Trousse</strong></li>
+                        <li> <div class="price">Prix: 7.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Trousse</p>
+          <p>7.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="goodies">
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/goodies/bonnet.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies1">
+            <div class="modal fade goodies1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/goodies/bonnet.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="12.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Bonnet adulte</strong></li>
+                        <li> <div class="price">Prix: 12.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Bonnet adulte</p>
+          <p>12.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/goodies/casquette.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies2">
+            <div class="modal fade goodies2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/goodies/casquette.jpeg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="8.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Casquette</strong></li>
+                        <li> <div class="price">Prix: 8.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Casquette</p>
+          <p>8.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/goodies/magnet.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies3">
+            <div class="modal fade goodies3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/goodies/magnet.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="2.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Magnet Audrey</strong></li>
+                        <li> <div class="price">Prix: 2.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Magnet Audrey</p>
+          <p>2.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/goodies/magnet2.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies4">
+            <div class="modal fade goodies4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/goodies/magnet2.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="2.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Magnet</strong></li>
+                        <li> <div class="price">Prix: 2.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Magnet</p>
+          <p>2.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+      <div class="row line">
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/goodies/porteCle.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies5">
+            <div class="modal fade goodies5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/goodies/porteCle.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="3.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Porte clé</strong></li>
+                        <li> <div class="price">Prix: 3.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Porte clé</p>
+          <p>3.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/goodies/sac.png" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies6">
+            <div class="modal fade goodies6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/goodies/sac.png">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="5.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Sac en tissus</strong></li>
+                        <li> <div class="price">Prix: 5.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Sac en tissus</p>
+          <p>5.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/goodies/tirelire.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies7">
+            <div class="modal fade goodies7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/goodies/tirelire.jpg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="10.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>Tirelire</strong></li>
+                        <li> <div class="price">Prix: 10.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>Tirelire</p>
+          <p>10.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+          <div class="row">
+            <img src="assets/img/goodies/tShirtFemme.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies8">
+            <div class="modal fade goodies8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <p>Article sélectionné</p>
+                  <img src="assets/img/goodies/tShirtFemme.jpeg">
+                  <form method="post" action="">
+                    <fieldset>
+                      <input type="hidden" name="my-item-id" value="1" />
+                      <input type="hidden" name="my-item-price" class=price value="12.00" />
+                      <input type="hidden" name="my-item-url" class="img"/>
+                      <input type="hidden" name="my-item-ref" value="" class="ref"/>
+                      <ul>
+                        <li><strong>T-shirt femme TU</strong></li>
+                        <li> <div class="price">Prix: 12.00€</div>
+                        </li>
+                        <li>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityLess" class="quantityLess">-</button>
+                        </li>
+                      </ul>
+                      <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>T-shirt femme TU</p>
+          <p>12.00€</p>
+          <button type="button" name="button" class="center-block article">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.container-fluid -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="assets/libs/bootstrap/js/bootstrap.js"></script>
+<script src="assets/js/jquery-ui.js"></script>
+<script>
+var quantity = $('input[name=my-item-qty]').val();
+var price = $('input[name=my-item-price]').val();
+$(function(){
+  $(".quantityPlus").click(function(){
+    quantity ++;
+    var PrixxQuantity = (price*quantity);
+    $('.price').text('Prix:' + PrixxQuantity + '€')
+    $('input[name=my-item-qty]').val(quantity);
+  });
+});
+$(function(){
+  $('.quantityLess').click(function(){
+    quantity -- ;
+    var PrixxQuantity = (price*quantity);
+    $('.price').text('Prix:' + PrixxQuantity + '€')
+    $('.quantity').val(quantity);
+  });
+});
+$(function(){
+  $('.addButton').click(function(){
+    $('#cart').text(price);
+  });
+});
+</script>
+</body>
 </html>
