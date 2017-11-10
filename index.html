@@ -12,11 +12,11 @@
   <!-- Bootstrap core CSS -->
   <link href="assets/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- CSS perso -->
-  <link rel="stylesheet" href="assets/css/style2.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="starter-template.css" rel="stylesheet">
 </head>
-
 <body>
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -27,13 +27,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="index3.html"><h1 class="rainbow">Lilycorn</h1></a>
+        <a href="index.html"><h1 class="rainbow">Lilycorn</h1></a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">chambre</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="active"><a href="#">Accueil</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#myCart">Panier</a></li>
+          <li><a href="#" data-toggle="modal" data-target="#contact">Contact</a></li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -44,50 +44,101 @@
       <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
     </div>
   </div>
-  <button class="btn btn-primary" data-toggle="modal" data-target=".bd-modal-lg">Panier</button>
-  <div class="modal fade bd-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div id="cart">
-          Panier
+  <div class="row">
+    <div class="modal fade" id="myCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Mon panier</h4>
+          </div>
+          <div class="modal-body">
+            <div class="dropdown">
+              <div id="cart">
+                <p><span id="in-cart-items-num">0</span> Articles</p>
+              </div>
+              <ul id="cart-dropdown">
+                <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#room">Chambre</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#kitchen">Cuisine</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#bathRoom">Salle de bains</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#deco">Déco</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#highTech">High-Tech</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#toys">Jouets</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#stationery">Papeterie</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#goodies">Goodies</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
+  <div class="modal" id="contact">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Nous contacter</h4>
+        </div>
+        <div class="modal-body">
+          <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+  <div class="row">
+    <div class="col-xs-12 col-lg-6">
+      <div class="row">
+        <label for="name">Votre nom</label>
+        <input id="name" class="inputName" name="name" type="text" placeholder="Nom"/>
       </div>
+      <div class="row">
+        <label for="email">Votre Email</label>
+        <input id="email" class="inputEmail" name="email" type="text" value="" placeholder="Email"/>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+
+        <label for="message">Votre message</label><br />
+        <textarea id="message" class="inputMessage" name="message" rows="5" cols="30"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-6">
+      <p>Siège :</p>
+      <p>7 avenue de l'arc en ciel</p>
+      <p>00000 Paillette Land</p>
+      <p>Tel : 01.23.45.67.89</p>
+    </div>
+  </div>
+</form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Envoyer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item ">
+      <a class="nav-link active catorange" data-toggle="tab" href="#room">Chambre</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active catred" data-toggle="tab" href="#kitchen">Cuisine</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active catlightyellow" data-toggle="tab" href="#bathRoom">Salle de bains</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active catyellow" data-toggle="tab" href="#deco">Déco</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active catgreen" data-toggle="tab" href="#highTech">High-Tech</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active catlightblue" data-toggle="tab" href="#toys">Jouets</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active catblue" data-toggle="tab" href="#stationery">Papeterie</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active catpurple" data-toggle="tab" href="#goodies">Goodies</a>
     </li>
   </ul>
   <div id="tabContent" class="tab-content">
@@ -112,9 +163,9 @@
                         <li> <div class="price">Prix: 7.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -147,9 +198,9 @@
                         <li> <div class="price">Prix: 8.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -182,9 +233,9 @@
                         <li> <div class="price">Prix: 7.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -217,9 +268,9 @@
                         <li> <div class="price">Prix: 20.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -254,9 +305,9 @@
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -289,9 +340,9 @@
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -324,9 +375,9 @@
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -359,9 +410,9 @@
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -380,7 +431,7 @@
     <div class="tab-pane fade in" id="kitchen">
       <!-- Large modal -->
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/cuisine/boite1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen1">
             <div class="modal fade kitchen1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -399,9 +450,9 @@
                         <li> <div class="price">Prix: 6.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -415,7 +466,7 @@
           <p>6.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/cuisine/bougieAnni.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen2">
             <div class="modal fade kitchen2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -434,9 +485,9 @@
                         <li> <div class="price">Prix: 3.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -450,7 +501,7 @@
           <p>3.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/cuisine/curedent.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen3">
             <div class="modal fade kitchen3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -469,9 +520,9 @@
                         <li> <div class="price">Prix: 4.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -485,7 +536,7 @@
           <p>4.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/cuisine/mouleGateau1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen4">
             <div class="modal fade kitchen4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -504,9 +555,9 @@
                         <li> <div class="price">Prix: 12.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -522,7 +573,7 @@
         </div>
       </div>
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/cuisine/mug2.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen5">
             <div class="modal fade kitchen5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -541,9 +592,9 @@
                         <li> <div class="price">Prix: 5.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -557,7 +608,7 @@
           <p>5.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/cuisine/mug5.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen6">
             <div class="modal fade kitchen6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -576,9 +627,9 @@
                         <li> <div class="price">Prix: 5.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -592,7 +643,7 @@
           <p>5.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/cuisine/mug6.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen7">
             <div class="modal fade kitchen7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -611,9 +662,9 @@
                         <li> <div class="price">Prix: 5.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -627,7 +678,7 @@
           <p>5.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/cuisine/thermosMug.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".kitchen8">
             <div class="modal fade kitchen8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -646,9 +697,9 @@
                         <li> <div class="price">Prix: 7.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -666,7 +717,7 @@
     </div>
     <div class="tab-pane fade" id="bathRoom">
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/salleDeBain/papierToilette.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom1">
             <div class="modal fade bathRoom1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -685,9 +736,9 @@
                         <li> <div class="price">Prix: 3.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -701,7 +752,7 @@
           <p>3.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/salleDeBain/peignoir.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom2">
             <div class="modal fade bathRoom2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -720,9 +771,9 @@
                         <li> <div class="price">Prix: 25.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -736,7 +787,7 @@
           <p>25.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/salleDeBain/savon1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom3">
             <div class="modal fade bathRoom3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -755,9 +806,9 @@
                         <li> <div class="price">Prix: 3.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -771,7 +822,7 @@
           <p>3.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/salleDeBain/savon2.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom4">
             <div class="modal fade bathRoom4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -790,9 +841,9 @@
                         <li> <div class="price">Prix: 3.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -808,7 +859,7 @@
         </div>
       </div>
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/salleDeBain/savon3.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom5">
             <div class="modal fade bathRoom5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -827,9 +878,9 @@
                         <li> <div class="price">Prix: 4.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -843,7 +894,7 @@
           <p>4.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/salleDeBain/serviette.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom6">
             <div class="modal fade bathRoom6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -862,9 +913,9 @@
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -878,7 +929,7 @@
           <p>15.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/salleDeBain/serviette1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom7">
             <div class="modal fade bathRoom7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -897,9 +948,9 @@
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -913,7 +964,7 @@
           <p>15.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/salleDeBain/trousseMaquillage.png" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".bathRoom8">
             <div class="modal fade bathRoom8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -932,9 +983,9 @@
                         <li> <div class="price">Prix: 8.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -952,14 +1003,14 @@
     </div>
     <div class="tab-pane fade" id="deco">
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/deco/boogie.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco1">
             <div class="modal fade deco1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                   <p>Article sélectionné</p>
-                  <img src="assets/img/deco/bougie.jpg">
+                  <img src="assets/img/deco/boogie.jpg">
                   <form method="post" action="">
                     <fieldset>
                       <input type="hidden" name="my-item-id" value="1" />
@@ -971,9 +1022,9 @@
                         <li> <div class="price">Prix: 6.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -987,7 +1038,7 @@
           <p>6.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/deco/lampe.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco2">
             <div class="modal fade deco2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1006,9 +1057,9 @@
                         <li> <div class="price">Prix: 12.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1022,7 +1073,7 @@
           <p>12.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/deco/lampe1.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco3">
             <div class="modal fade deco3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1041,9 +1092,9 @@
                         <li> <div class="price">Prix: 10.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1057,7 +1108,7 @@
           <p>10.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/deco/noel.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco4">
             <div class="modal fade deco4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1076,9 +1127,9 @@
                         <li> <div class="price">Prix: 2.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1094,7 +1145,7 @@
         </div>
       </div>
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/deco/stickers.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco5">
             <div class="modal fade deco5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1113,9 +1164,9 @@
                         <li> <div class="price">Prix: 9.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1129,7 +1180,7 @@
           <p>9.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/deco/trophe.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco6">
             <div class="modal fade deco6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1148,9 +1199,9 @@
                         <li> <div class="price">Prix: 12.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1164,7 +1215,7 @@
           <p>12.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/deco/trophe1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco7">
             <div class="modal fade deco7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1183,9 +1234,9 @@
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1199,7 +1250,7 @@
           <p>15.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/deco/trophe2.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".deco8">
             <div class="modal fade deco8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1218,9 +1269,9 @@
                         <li> <div class="price">Prix: 20.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1238,7 +1289,7 @@
     </div>
     <div class="tab-pane fade" id="highTech">
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/highTech/cleUSB.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech1">
             <div class="modal fade highTech1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1257,9 +1308,9 @@
                         <li> <div class="price">Prix: 8.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1273,7 +1324,7 @@
           <p>8.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/highTech/cleUSB1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech2">
             <div class="modal fade highTech2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1292,9 +1343,9 @@
                         <li> <div class="price">Prix: 8.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1308,7 +1359,7 @@
           <p>8.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/highTech/cleUSB2.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech3">
             <div class="modal fade highTech3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1327,9 +1378,9 @@
                         <li> <div class="price">Prix: 8.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1343,7 +1394,7 @@
           <p>8.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/highTech/coqueTel.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech4">
             <div class="modal fade highTech4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1362,9 +1413,9 @@
                         <li> <div class="price">Prix: 7.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1380,7 +1431,7 @@
         </div>
       </div>
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/highTech/coqueTel1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech5">
             <div class="modal fade highTech5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1399,9 +1450,9 @@
                         <li> <div class="price">Prix: 7.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1415,7 +1466,7 @@
           <p>7.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/highTech/disqueDur.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech6">
             <div class="modal fade highTech6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1434,9 +1485,9 @@
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1450,7 +1501,7 @@
           <p>15.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/highTech/ecouteur.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech7">
             <div class="modal fade highTech7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1469,9 +1520,9 @@
                         <li> <div class="price">Prix: 9.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1485,7 +1536,7 @@
           <p>9.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/highTech/enceinte.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".highTech8">
             <div class="modal fade highTech8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1504,9 +1555,9 @@
                         <li> <div class="price">Prix: 35.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1524,7 +1575,7 @@
     </div>
     <div class="tab-pane fade" id="toys">
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/Jouets/bouee.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys1">
             <div class="modal fade toys1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1543,9 +1594,9 @@
                         <li> <div class="price">Prix: 10.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1559,7 +1610,7 @@
           <p>10.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/Jouets/bouee1.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys2">
             <div class="modal fade toys2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1578,9 +1629,9 @@
                         <li> <div class="price">Prix: 10.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1594,7 +1645,7 @@
           <p>10.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/Jouets/boueeGeante.png" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys3">
             <div class="modal fade toys3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1613,9 +1664,9 @@
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1629,7 +1680,7 @@
           <p>15.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/Jouets/deguisement.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys4">
             <div class="modal fade toys4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1648,9 +1699,9 @@
                         <li> <div class="price">Prix: 30.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1666,7 +1717,7 @@
         </div>
       </div>
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/Jouets/deguisement1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys5">
             <div class="modal fade toys5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1685,9 +1736,9 @@
                         <li> <div class="price">Prix: 25.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1701,7 +1752,7 @@
           <p>25.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/Jouets/jouetDeBain.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys6">
             <div class="modal fade toys6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1720,9 +1771,9 @@
                         <li> <div class="price">Prix: 3.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1736,7 +1787,7 @@
           <p>3.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/Jouets/masque.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys7">
             <div class="modal fade toys7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1755,9 +1806,9 @@
                         <li> <div class="price">Prix: 10.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1771,7 +1822,7 @@
           <p>10.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/Jouets/serreTete.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".toys8">
             <div class="modal fade toys8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1790,9 +1841,9 @@
                         <li> <div class="price">Prix: 5.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1810,7 +1861,7 @@
     </div>
     <div class="tab-pane fade" id="stationery">
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/papeterie/crayon.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery1">
             <div class="modal fade stationery1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1829,9 +1880,9 @@
                         <li> <div class="price">Prix: 10.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1845,7 +1896,7 @@
           <p>10.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/papeterie/papeterie.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery2">
             <div class="modal fade stationery2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1864,9 +1915,9 @@
                         <li> <div class="price">Prix: 7.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1880,7 +1931,7 @@
           <p>7.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/papeterie/perforatrice.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery3">
             <div class="modal fade stationery3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1899,9 +1950,9 @@
                         <li> <div class="price">Prix: 5.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1915,7 +1966,7 @@
           <p>5.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/papeterie/scotch.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery4">
             <div class="modal fade stationery4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1934,9 +1985,9 @@
                         <li> <div class="price">Prix: 8.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1952,7 +2003,7 @@
         </div>
       </div>
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/papeterie/stylo.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery5">
             <div class="modal fade stationery5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -1971,9 +2022,9 @@
                         <li> <div class="price">Prix: 3.50€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -1987,7 +2038,7 @@
           <p>3.50€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/papeterie/stylo1.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery6">
             <div class="modal fade stationery6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -2006,9 +2057,9 @@
                         <li> <div class="price">Prix: 3.50€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -2022,7 +2073,7 @@
           <p>3.50€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/papeterie/stylo2.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery7">
             <div class="modal fade stationery7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -2041,9 +2092,9 @@
                         <li> <div class="price">Prix: 2.50€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -2057,7 +2108,7 @@
           <p>2.50€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/papeterie/trousse.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".stationery8">
             <div class="modal fade stationery8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -2076,9 +2127,9 @@
                         <li> <div class="price">Prix: 7.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -2096,7 +2147,7 @@
     </div>
     <div class="tab-pane fade" id="goodies">
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/goodies/bonnet.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies1">
             <div class="modal fade goodies1 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -2115,9 +2166,9 @@
                         <li> <div class="price">Prix: 12.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -2131,7 +2182,7 @@
           <p>12.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/goodies/casquette.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies2">
             <div class="modal fade goodies2 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -2150,9 +2201,9 @@
                         <li> <div class="price">Prix: 8.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -2166,7 +2217,7 @@
           <p>8.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/goodies/magnet.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies3">
             <div class="modal fade goodies3 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -2185,9 +2236,9 @@
                         <li> <div class="price">Prix: 2.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -2201,7 +2252,7 @@
           <p>2.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/goodies/magnet2.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies4">
             <div class="modal fade goodies4 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -2220,9 +2271,9 @@
                         <li> <div class="price">Prix: 2.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -2238,7 +2289,7 @@
         </div>
       </div>
       <div class="row line">
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/goodies/porteCle.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies5">
             <div class="modal fade goodies5 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -2257,9 +2308,9 @@
                         <li> <div class="price">Prix: 3.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -2273,7 +2324,7 @@
           <p>3.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/goodies/sac.png" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies6">
             <div class="modal fade goodies6 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -2292,9 +2343,9 @@
                         <li> <div class="price">Prix: 5.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -2308,7 +2359,7 @@
           <p>5.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/goodies/tirelire.jpg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies7">
             <div class="modal fade goodies7 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -2327,9 +2378,9 @@
                         <li> <div class="price">Prix: 10.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -2343,7 +2394,7 @@
           <p>10.00€</p>
           <button type="button" name="button" class="center-block article">Ajouter au panier</button>
         </div>
-        <div class="col-xs-12 col-sm-6 col-sm-4 col-lg-3">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="row">
             <img src="assets/img/goodies/tShirtFemme.jpeg" class="btn btn-primary center-block articleImg" data-toggle="modal" data-target=".goodies8">
             <div class="modal fade goodies8 " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -2362,9 +2413,9 @@
                         <li> <div class="price">Prix: 12.00€</div>
                         </li>
                         <li>
-                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
-                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
                           <button type="button" name="quantityLess" class="quantityLess">-</button>
+                          <label>Quantité: <input type="text" name="my-item-qty" value="1" size="3" class="quantity" /></label>
+                          <button type="button" name="quantityPlus" class="quantityPlus">+</button>
                         </li>
                       </ul>
                       <input type="submit" name="my-add-button" value="Ajouter au panier" class="addButton" />
@@ -2389,14 +2440,15 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="assets/libs/bootstrap/js/bootstrap.js"></script>
 <script src="assets/js/jquery-ui.js"></script>
+<script src="cart.js"></script>
+<script src="cursor.js"></script>
 <script>
 var quantity = $('input[name=my-item-qty]').val();
-var price = $('input[name=my-item-price]').val();
+var price = $('.price').val();
 $(function(){
   $(".quantityPlus").click(function(){
     quantity ++;
     var PrixxQuantity = (price*quantity);
-    $('.price').text('Prix:' + PrixxQuantity + '€')
     $('input[name=my-item-qty]').val(quantity);
   });
 });
@@ -2404,15 +2456,42 @@ $(function(){
   $('.quantityLess').click(function(){
     quantity -- ;
     var PrixxQuantity = (price*quantity);
-    $('.price').text('Prix:' + PrixxQuantity + '€')
     $('.quantity').val(quantity);
-  });
-});
-$(function(){
-  $('.addButton').click(function(){
-    $('#cart').text(price);
   });
 });
 </script>
 </body>
+<footer>
+<div class="bottomDiv">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <p>ACHETER :</p>
+          <a href="#">Boutique LilyCorn</a><br>
+          <a href="#">LilyCorn sur votre mobile</a><br>
+          <a href="#">Garantie client LilyCorn</a><br>
+          <a href="#">Promotions</a><br>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <p>VENDRE :</p>
+          <a href="#">Espace vendre</a><br>
+          <a href="#">Ouvrir une boutique LilyCorn</a><br>
+          <a href="#">Espace livraison</a><br>
+          <a href="#">Frais de vente</a><br>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <p>A PROPOS DE LILYCORN :</p>
+          <a href="#">Mentions légales</a><br>
+          <a href="#">Communiqués de presse</a><br>
+          <a href="#">Relations avec les investisseurs</a><br>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <p>RÉSEAUX SOCIAUX : </p>
+        <a href="#"><img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/facebook_circle-32.png" alt="facebook"></a>
+        <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-twitter-32.png" alt="tweeter"></a>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
 </html>
