@@ -13,10 +13,11 @@
     <link href="assets/libs/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- CSS perso -->
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="assets/css/style0.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
   </head>
-
   <body>
       <div class="container">
         <ul class="nav nav-tabs">
@@ -40,8 +41,6 @@
     </ul>
   </li>
 </ul>
-
-
 <div class="row">
   <div class="modal fade" id="myCart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
@@ -51,8 +50,14 @@
           <h4 class="modal-title" id="myModalLabel">Mon panier</h4>
         </div>
         <div class="modal-body">
-
-          <p id="plop">J'aime le pomes</p>
+          <div class="dropdown">
+            <div id="cart">
+              <p><span id="in-cart-items-num">0</span> Articles</p>
+            </div>
+            <ul id="cart-dropdown">
+              <li id="empty-cart-msg"><a>Votre panier est vide</a></li>
+            </ul>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
@@ -62,8 +67,6 @@
     </div>
   </div>
 </div>
-
-
 <div id="myTabContent" class="tab-content">
   <div class="tab-pane fade active in" id="home">
     <p id="price" data-value="800"> Prix : 800</p>
@@ -81,6 +84,24 @@
     <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
   </div>
 </div>
+<img src="assets/img/cursor.png" alt="">
+
+<label for="q">Quantité: </label>
+<select id="qt" name="q">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+</select><br>
+<button type="button" class="add-to-cart" data-id="432" data-name="Pastilles" data-price="29,00" data-ref="97" data-url="/produit/pastilles-anti-douleurs/">Ajouter au panier</button>
+<button type="button" class="add-to-cart" data-id="20" data-name="Pouet" data-price="29,00" data-ref="97fef" data-url="/produit/pastilles-anti-douleurs/">Ajouter au panier</button>
+
+
 
         <!--/.nav-collapse -->
       </div>
@@ -90,20 +111,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/js/bootstrap.js"></script>
-    <script>
-    var price = $('#price').attr('data-value');
-    var price1 = $('#price1').attr('data-value');
-    var i=0;
-    function addCards(){
-      i++;
-      document.getElementById('plop').innerHTML=+i*price;
-
-    }
-    function addCards1(){
-      i++;
-      document.getElementById('plop').innerHTML=i*price1;
-
-    }
-    </script>
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/cart.js"></script>
   </body>
 </html>

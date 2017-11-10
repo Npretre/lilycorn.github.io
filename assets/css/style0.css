@@ -1,0 +1,14 @@
+.modal-header{
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+}
+.modal-header h4{
+    color: white;
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+}
+.modal-body ul li{
+  list-style-type: none;
+}
+html{
+  cursor: url("../img/cursor.png"),pointer;
+}
