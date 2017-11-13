@@ -1,7 +1,6 @@
 p{
   color: black;
 }
-
 .art{
   border-bottom: 1px solid red;
   width: 100%;
@@ -10,8 +9,10 @@ hr {
   border-top: 1px solid #8c8b8b;
 }
 h2{
+  color: #EB6864;
   text-align: center;
-  
+  text-shadow: 1px 1px 2px black;
+
 }
 .article{
   padding:6px 0 6px 0;
@@ -35,7 +36,12 @@ h2{
 .test{
   position: absolute;
 }
-
+.nav-item{
+border-bottom: 5px double #EB6864;
+border-top:  5px double #EB6864;
+width: 12.5%;
+text-align: center;
+}
 .addButton {
 
   -webkit-transform: perspective(1px) translateZ(0);
@@ -90,7 +96,6 @@ h2{
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-top: 35%;
 }
 .bottomDiv p {
   color: white;
@@ -101,7 +106,63 @@ h2{
   color: white;
   font-family: georgia sans-serif;
 }
-
+#login-dp{
+    min-width: 350px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+    .nav-item{
+      width: 50%;
+    }
+}
+.line{
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
 .line button{
   margin-bottom: 30px;
 }

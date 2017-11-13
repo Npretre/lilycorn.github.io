@@ -55,6 +55,45 @@
           <li class="active"><a href="#">Accueil</a></li>
           <li><a href="#" data-toggle="modal" data-target="#myCart">Panier</a></li>
           <li><a href="#" data-toggle="modal" data-target="#contact">Contact</a></li>
+          <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Connexion</b> <span class="caret"></span></a>
+      <ul id="login-dp" class="dropdown-menu">
+        <li>
+           <div class="row">
+              <div class="col-md-12 col-lg-12">
+                Se connecter avec
+                <div class="social-buttons">
+                  <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                  <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                </div>
+                                ou
+                 <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                    <div class="form-group">
+                       <label class="sr-only" for="exampleInputEmail2">Adresse mail</label>
+                       <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Adresse mail" required>
+                    </div>
+                    <div class="form-group">
+                       <label class="sr-only" for="exampleInputPassword2">Mot de passe</label>
+                       <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Mot de passe" required>
+                                             <div class="help-block text-right"><a href="">Mot de passe oublié ?</a></div>
+                    </div>
+                    <div class="form-group">
+                       <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+                    </div>
+                    <div class="checkbox">
+                       <label>
+                       <input type="checkbox"> Rester connecté
+                       </label>
+                    </div>
+                 </form>
+              </div>
+              <div class="bottom text-center">
+                Tu es nouveau ? <a href="#"><b>Rejoins nous !</b></a>
+              </div>
+           </div>
+        </li>
+      </ul>
+        </li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -136,30 +175,102 @@
   </div>
   <ul class="nav nav-tabs">
     <li class="nav-item ">
-      <a class="nav-link active catorange" data-toggle="tab" href="#room">Chambre</a>
+      <a class="nav-link active catorange navTab" data-toggle="tab" href="#room">Chambre</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active catred" data-toggle="tab" href="#kitchen">Cuisine</a>
+      <a class="nav-link active catred navTab" data-toggle="tab" href="#kitchen">Cuisine</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active catlightyellow" data-toggle="tab" href="#bathRoom">Salle de bains</a>
+      <a class="nav-link active catlightyellow navTab" data-toggle="tab" href="#bathRoom">Salle de bains</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active catyellow" data-toggle="tab" href="#deco">Déco</a>
+      <a class="nav-link active catyellow navTab" data-toggle="tab" href="#deco">Déco</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active catgreen" data-toggle="tab" href="#highTech">High-Tech</a>
+      <a class="nav-link active catgreen navTab" data-toggle="tab" href="#highTech">High-Tech</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active catlightblue" data-toggle="tab" href="#toys">Jouets</a>
+      <a class="nav-link active catlightblue navTab" data-toggle="tab" href="#toys">Jouets</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active catblue" data-toggle="tab" href="#stationery">Papeterie</a>
+      <a class="nav-link active catblue navTab" data-toggle="tab" href="#stationery">Papeterie</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active catpurple" data-toggle="tab" href="#goodies">Goodies</a>
+      <a class="nav-link active catpurple navTab" data-toggle="tab" href="#goodies">Goodies</a>
     </li>
   </ul>
+  <hr>
+  <div id="welcome">
+    <div class="row line">
+      <!-- Coussin -->
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="row">
+          <a> <img src="assets/img/chambre/coussin.jpg" data-toggle="tab" class="btn btn-primary nav-link active center-block articleImg imgRoom" href="#room"></a>
+          <h2 class="imgRoom">Chambre</h2>
+          <div class="modal fade room1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="row">
+          <a> <img src="assets/img/cuisine/mug5.jpg" data-toggle="tab" class="btn btn-primary nav-link active center-block articleImg imgRoom" href="#kitchen"></a>
+          <h2 class="imgRoom">Cuisine</h2>
+          <div class="modal fade kitchen6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="row">
+          <a> <img src="assets/img/salleDeBain/papierToilette.jpg" data-toggle="tab" class="btn btn-primary nav-link active center-block articleImg imgRoom" href="#bathRoom"></a>
+          <h2 class="imgRoom">Salle de bain</h2>
+          <div class="modal fade kitchen6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="row">
+          <a> <img src="assets/img/deco/lampe1.jpeg" data-toggle="tab" class="btn btn-primary nav-link active center-block articleImg imgRoom" href="#deco"></a>
+          <h2 class="imgRoom">Déco</h2>
+          <div class="modal fade kitchen6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row line">
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="row">
+          <a> <img src="assets/img/highTech/cleUSB1.jpg" data-toggle="tab" class="btn btn-primary nav-link active center-block articleImg imgRoom" href="#highTech"></a>
+          <h2 class="imgRoom">High-Tech</h2>
+          <div class="modal fade kitchen6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="row">
+          <a> <img src="assets/img/Jouets/deguisement.jpg" data-toggle="tab" class="btn btn-primary nav-link active center-block articleImg imgRoom" href="#toys"></a>
+          <h2 class="imgRoom">Jouets</h2>
+          <div class="modal fade kitchen6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="row">
+          <a> <img src="assets/img/papeterie/trousse.jpg" data-toggle="tab" class="btn btn-primary nav-link active center-block articleImg imgRoom" href="#stationery"></a>
+          <h2 class="imgRoom">Papeterie</h2>
+          <div class="modal fade kitchen6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="row">
+          <a> <img src="assets/img/goodies/porteCle.jpg" data-toggle="tab" class="btn btn-primary nav-link active center-block articleImg imgRoom" href="#goodies"></a>
+          <h2 class="imgRoom">Goodies</h2>
+          <div class="modal fade kitchen6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="tabContent" class="tab-content">
     <!-- Modals Chambres -->
     <div class="tab-pane fade" id="room">
@@ -181,6 +292,7 @@
                       <input type="hidden" name="my-item-ref" value="" class="ref"/>
                       <ul>
                         <li><strong>Coussin</strong></li>
+                        <li>Description : coussin avec dessin de licorne, 40x40 cm</li>
                         <li> <div class="price">Prix: 7.00€</div>
                         </li>
                         <li>
@@ -217,6 +329,7 @@
                       <input type="hidden" name="my-item-ref" value="" class="ref"/>
                       <ul>
                         <li><strong>Chausson peluche</strong></li>
+                        <li>Description : chausson en peluche pour enfant</li>
                         <li> <div class="price">Prix: 8.00€</div>
                         </li>
                         <li>
@@ -253,6 +366,7 @@
                       <input type="hidden" name="my-item-ref" value="" class="ref"/>
                       <ul>
                         <li><strong>Coussin en forme de licorne</strong></li>
+                        <li>Description : coussin en forme de licorne</li>
                         <li> <div class="price">Prix: 7.00€</div>
                         </li>
                         <li>
@@ -289,6 +403,7 @@
                       <input type="hidden" name="my-item-ref" value="" class="ref"/>
                       <ul>
                         <li><strong>Housse de couette</strong></li>
+                        <li>Description : Couverture licorne en laine, 150x80 cm</li>
                         <li> <div class="price">Prix: 20.00€</div>
                         </li>
                         <li>
@@ -327,6 +442,7 @@
                       <input type="hidden" name="my-item-ref" value="" class="ref"/>
                       <ul>
                         <li><strong>Peluche licorne Blanc & Or</strong></li>
+                        <li>Description : Peluche licorne en laine</li>
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
@@ -363,6 +479,7 @@
                       <input type="hidden" name="my-item-ref" value="" class="ref"/>
                       <ul>
                         <li><strong>Peluche Blanche & Rose</strong></li>
+                        <li>Description : Peluche licorne en laine</li>
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
@@ -399,6 +516,7 @@
                       <input type="hidden" name="my-item-ref" value="" class="ref"/>
                       <ul>
                         <li><strong>Peluche Rose</strong></li>
+                        <li>Description : Peluche licorne en laine</li>
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
@@ -435,6 +553,7 @@
                       <input type="hidden" name="my-item-ref" value="" class="ref"/>
                       <ul>
                         <li><strong>Veilleuse</strong></li>
+                        <li>Description : Veilleuse en forme de licorne</li>
                         <li> <div class="price">Prix: 15.00€</div>
                         </li>
                         <li>
@@ -477,6 +596,7 @@
                       <input type="hidden" name="my-item-ref" value="" class="ref"/>
                       <ul>
                         <li><strong>Boite à goûter</strong></li>
+                        <li>Description : Boite à goûter avec motifs de licorne</li>
                         <li> <div class="price">Prix: 6.00€</div>
                         </li>
                         <li>
@@ -512,6 +632,7 @@
                         <input type="hidden" name="my-item-ref" value="" class="ref"/>
                         <ul>
                           <li><strong>Lot de 10 bougies d'anniversaire</strong></li>
+                          <li>Description : Bougies d'annirversaire avec une licorne planté dessus</li>
                           <li> <div class="price">Prix: 3.00€</div>
                           </li>
                           <li>
@@ -548,6 +669,7 @@
                         <input type="hidden" name="my-item-ref" value="" class="ref"/>
                         <ul>
                           <li><strong>Cure dent x100</strong></li>
+                          <li>Description : Un lot de 100 cure-dent en forme de licorne</li>
                           <li> <div class="price">Prix: 4.00€</div>
                           </li>
                           <li>
@@ -584,6 +706,7 @@
                         <input type="hidden" name="my-item-ref" value="" class="ref"/>
                         <ul>
                           <li><strong>Moule à gâteau</strong></li>
+                          <li>Description : Moule à gâteau en forme de licorne</li>
                           <li> <div class="price">Prix: 12.00€</div>
                           </li>
                           <li>
@@ -622,6 +745,7 @@
                         <input type="hidden" name="my-item-ref" value="" class="ref"/>
                         <ul>
                           <li><strong>Mug</strong></li>
+                          <li>Description : Tasse avec un dessin de licorne</li>
                           <li> <div class="price">Prix: 5.00€</div>
                           </li>
                           <li>
@@ -658,6 +782,7 @@
                         <input type="hidden" name="my-item-ref" value="" class="ref"/>
                         <ul>
                           <li><strong>Mug en forme de licorne</strong></li>
+                          <li>Description : Tasse en forme de licorne</li>
                           <li> <div class="price">Prix: 5.00€</div>
                           </li>
                           <li>
@@ -694,6 +819,7 @@
                         <input type="hidden" name="my-item-ref" value="" class="ref"/>
                         <ul>
                           <li><strong>Mug</strong></li>
+                          <li>Description : Tasse avec motifs de licornes</li>
                           <li> <div class="price">Prix: 5.00€</div>
                           </li>
                           <li>
@@ -730,6 +856,7 @@
                         <input type="hidden" name="my-item-ref" value="" class="ref"/>
                         <ul>
                           <li><strong>Mug thermos</strong></li>
+                          <li>Description : Mug avec dessins de licornes</li>
                           <li> <div class="price">Prix: 7.00€</div>
                           </li>
                           <li>
@@ -770,6 +897,7 @@
                         <input type="hidden" name="my-item-ref" value="" class="ref"/>
                         <ul>
                           <li><strong>Rouleau de papier toilette x2</strong></li>
+                          <li>Description : Papier toilette avec des motifs de licornes arc-en-ciel</li>
                           <li> <div class="price">Prix: 3.00€</div>
                           </li>
                           <li>
@@ -804,6 +932,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Peignoir adulte</strong></li>
+                            <li>Description : Peignoir avec un logo licorne, blanc et rose</li>
                             <li> <div class="price">Prix: 25.00€</div>
                             </li>
                             <li>
@@ -839,6 +968,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Savon orange & patchouli</strong></li>
+                            <li>Description : Savon licorne, saveur orange & patchouli</li>
                             <li> <div class="price">Prix: 3.00€</div>
                             </li>
                             <li>
@@ -874,6 +1004,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Savon enfant</strong></li>
+                            <li>Description : Savon licorne rose pour enfant</li>
                             <li> <div class="price">Prix: 3.00€</div>
                             </li>
                             <li>
@@ -911,6 +1042,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Gel douche onctueux</strong></li>
+                            <li>Description : Gel douche onctueux licorne</li>
                             <li> <div class="price">Prix: 4.00€</div>
                             </li>
                             <li>
@@ -946,6 +1078,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Serviette de plage enfant</strong></li>
+                            <li>Description : Serviette de plage rose avec dessin licorne</li>
                             <li> <div class="price">Prix: 15.00€</div>
                             </li>
                             <li>
@@ -981,6 +1114,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Drap de bain</strong></li>
+                            <li>Description : Drap de bain bleu-ciel avec dessin de licorne</li>
                             <li> <div class="price">Prix: 15.00€</div>
                             </li>
                             <li>
@@ -1016,6 +1150,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Trousse à maquillage</strong></li>
+                            <li>Description : Trousse de maquillage avec dessin licorne</li>
                             <li> <div class="price">Prix: 8.00€</div>
                             </li>
                             <li>
@@ -1056,6 +1191,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Bougie</strong></li>
+                            <li>Description : Bougie en forme de licorne </li>
                             <li> <div class="price">Prix: 6.00€</div>
                             </li>
                             <li>
@@ -1091,6 +1227,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Lampe de chevet</strong></li>
+                            <li>Description : Lampe de chevet licorne</li>
                             <li> <div class="price">Prix: 12.00€</div>
                             </li>
                             <li>
@@ -1126,6 +1263,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Tête de licorne lumineuse</strong></li>
+                            <li>Description : Tête de licorne lumineuse</li>
                             <li> <div class="price">Prix: 10.00€</div>
                             </li>
                             <li>
@@ -1161,6 +1299,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Décoration de noël</strong></li>
+                            <li>Description : Petite statuette de licorne</li>
                             <li> <div class="price">Prix: 2.00€</div>
                             </li>
                             <li>
@@ -1198,6 +1337,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Stickers mural</strong></li>
+                            <li>Description : Stickers mural de licornes</li>
                             <li> <div class="price">Prix: 9.00€</div>
                             </li>
                             <li>
@@ -1233,6 +1373,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Trophé en tissus</strong></li>
+                            <li>Description : Trophés de licorne en tissu</li>
                             <li> <div class="price">Prix: 12.00€</div>
                             </li>
                             <li>
@@ -1268,6 +1409,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Trophé peluche</strong></li>
+                            <li>Description : Trophé de licorne en peluche</li>
                             <li> <div class="price">Prix: 15.00€</div>
                             </li>
                             <li>
@@ -1303,6 +1445,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Trophé géométrique</strong></li>
+                            <li>Description : Trophé de licorne géometrique</li>
                             <li> <div class="price">Prix: 20.00€</div>
                             </li>
                             <li>
@@ -1343,6 +1486,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Clé USB 8Go Rose</strong></li>
+                            <li>Description : Clé USB 8Go Rose licorne</li>
                             <li> <div class="price">Prix: 8.00€</div>
                             </li>
                             <li>
@@ -1378,6 +1522,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Clé USB 8Go Noir</strong></li>
+                            <li>Description : Clé USB 8Go Noir licorne</li>
                             <li> <div class="price">Prix: 8.00€</div>
                             </li>
                             <li>
@@ -1413,6 +1558,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Clé USB 16Go</strong></li>
+                            <li>Description : Clé USB 16Go licorne</li>
                             <li> <div class="price">Prix: 12.00€</div>
                             </li>
                             <li>
@@ -1448,6 +1594,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Coque de téléphone</strong></li>
+                            <li>Description : Coque de téléphone rose licorne</li>
                             <li> <div class="price">Prix: 7.00€</div>
                             </li>
                             <li>
@@ -1485,6 +1632,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Coque de téléphone</strong></li>
+                            <li>Description : Coque de licorne rose licorne</li>
                             <li> <div class="price">Prix: 7.00€</div>
                             </li>
                             <li>
@@ -1520,6 +1668,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Batterie externe</strong></li>
+                            <li>Description : Batterie externe bleu-ciel en forme de licorne</li>
                             <li> <div class="price">Prix: 15.00€</div>
                             </li>
                             <li>
@@ -1555,6 +1704,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Ecouteurs</strong></li>
+                            <li>Description : Ecouteurs en forme de licorne</li>
                             <li> <div class="price">Prix: 9.00€</div>
                             </li>
                             <li>
@@ -1590,6 +1740,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Enceinte bluetooth</strong></li>
+                            <li>Description : Enceinte bluetooth en forme de licorne</li>
                             <li> <div class="price">Prix: 35.00€</div>
                             </li>
                             <li>
@@ -1630,6 +1781,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Bouée enfant</strong></li>
+                            <li>Description : Bouée pour enfant bleu-ciel licorne</li>
                             <li> <div class="price">Prix: 10.00€</div>
                             </li>
                             <li>
@@ -1665,6 +1817,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Bouée enfant</strong></li>
+                            <li>Description : Bouée pour enfant blanche licorne</li>
                             <li> <div class="price">Prix: 10.00€</div>
                             </li>
                             <li>
@@ -1700,6 +1853,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Bouée Géante</strong></li>
+                            <li>Description : Bouée géante en forme de licorne</li>
                             <li> <div class="price">Prix: 15.00€</div>
                             </li>
                             <li>
@@ -1735,6 +1889,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Déguisement adulte</strong></li>
+                            <li>Description : Déguisement de licorne</li>
                             <li> <div class="price">Prix: 30.00€</div>
                             </li>
                             <li>
@@ -1772,6 +1927,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Déguisement pyjama</strong></li>
+                            <li>Description : Déguisement pyjama de licorne</li>
                             <li> <div class="price">Prix: 25.00€</div>
                             </li>
                             <li>
@@ -1807,6 +1963,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Licorne de bain</strong></li>
+                            <li>Description : Licorne de bain</li>
                             <li> <div class="price">Prix: 3.00€</div>
                             </li>
                             <li>
@@ -1842,6 +1999,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Masque</strong></li>
+                            <li>Description : Masque de licorne</li>
                             <li> <div class="price">Prix: 10.00€</div>
                             </li>
                             <li>
@@ -1877,6 +2035,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Serre-tête</strong></li>
+                            <li>Description : Serre-tête en forme de licorne</li>
                             <li> <div class="price">Prix: 5.00€</div>
                             </li>
                             <li>
@@ -1917,6 +2076,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Crayons de couleur</strong></li>
+                            <li>Description : Crayon de couleur licornes</li>
                             <li> <div class="price">Prix: 10.00€</div>
                             </li>
                             <li>
@@ -1952,6 +2112,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Fourniture enfant</strong></li>
+                            <li>Description : Lot de forniture licorne pour enfant</li>
                             <li> <div class="price">Prix: 7.00€</div>
                             </li>
                             <li>
@@ -1987,6 +2148,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Perforatrice</strong></li>
+                            <li>Description : Perforatrice rose licorne</li>
                             <li> <div class="price">Prix: 5.00€</div>
                             </li>
                             <li>
@@ -2022,6 +2184,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Dérouleur de scotch</strong></li>
+                            <li>Description : Dérouleur de scotch arc-en-ciel en forme de licorne</li>
                             <li> <div class="price">Prix: 8.00€</div>
                             </li>
                             <li>
@@ -2059,6 +2222,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Stylo</strong></li>
+                            <li>Description : Stylo en forme de licorne</li>
                             <li> <div class="price">Prix: 3.50€</div>
                             </li>
                             <li>
@@ -2094,6 +2258,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Stylo</strong></li>
+                            <li>Description : Stylo en forme de licorne</li>
                             <li> <div class="price">Prix: 3.50€</div>
                             </li>
                             <li>
@@ -2129,6 +2294,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Stylo</strong></li>
+                            <li>Description : Stylo en forme de licorne</li>
                             <li> <div class="price">Prix: 2.50€</div>
                             </li>
                             <li>
@@ -2164,6 +2330,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Trousse</strong></li>
+                            <li>Description : Trousse en forme de licorne</li>
                             <li> <div class="price">Prix: 7.00€</div>
                             </li>
                             <li>
@@ -2204,6 +2371,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Bonnet adulte</strong></li>
+                            <li>Description : Bonnet en forme de licorne</li>
                             <li> <div class="price">Prix: 12.00€</div>
                             </li>
                             <li>
@@ -2239,6 +2407,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Casquette</strong></li>
+                            <li>Description : Casquette rose avec logo licorne</li>
                             <li> <div class="price">Prix: 8.00€</div>
                             </li>
                             <li>
@@ -2274,6 +2443,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Magnet Audrey</strong></li>
+                            <li>Description : Petits aimant avec motifs de licorne</li>
                             <li> <div class="price">Prix: 2.00€</div>
                             </li>
                             <li>
@@ -2309,6 +2479,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Magnet</strong></li>
+                            <li>Description : Petits aimant avec motifs de licorne</li>
                             <li> <div class="price">Prix: 2.00€</div>
                             </li>
                             <li>
@@ -2346,6 +2517,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Porte clé</strong></li>
+                            <li>Description : Porte-clé licorne</li>
                             <li> <div class="price">Prix: 3.00€</div>
                             </li>
                             <li>
@@ -2381,6 +2553,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Sac en tissus</strong></li>
+                            <li>Description : Sac en tissu avec dessin licorne</li>
                             <li> <div class="price">Prix: 5.00€</div>
                             </li>
                             <li>
@@ -2416,6 +2589,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>Tirelire</strong></li>
+                            <li>Description : Tirelire en forme de licorne</li>
                             <li> <div class="price">Prix: 10.00€</div>
                             </li>
                             <li>
@@ -2451,6 +2625,7 @@
                           <input type="hidden" name="my-item-ref" value="" class="ref"/>
                           <ul>
                             <li><strong>T-shirt femme TU</strong></li>
+                            <li>Description : T-shirt blanc avec motifs de licornes</li>
                             <li> <div class="price">Prix: 12.00€</div>
                             </li>
                             <li>
@@ -2476,7 +2651,7 @@
       </div>
     </div>
     <!-- /.container-fluid -->
-    <!-- Bootstrap core JavaScript
+    <!-- Bootstrap core JavaScript<li>Description : T-shirt blanc avec motifs de licornes</li>
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -2500,7 +2675,18 @@
         $('.quantity').val(quantity);
       });
     });
-  </script>
+    $(function(){
+      $(".imgRoom").click(function(){
+        $(".imgRoom").css("display", "none");
+      });
+    });
+    $(function(){
+      $(".navTab").click(function(){
+        $("#welcome").css("display", "none");
+      });
+    });
+    </script>
+  </body>
 </body>
 <footer>
   <div class="bottomDiv">
