@@ -37,8 +37,7 @@ h2{
   position: absolute;
 }
 .nav-item{
-border-bottom: 5px double #EB6864;
-border-top:  5px double #EB6864;
+border-bottom: 7px solid #EB6864;
 width: 12.5%;
 text-align: center;
 }
