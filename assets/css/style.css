@@ -2,6 +2,13 @@ body{
   background-color: rgb(228, 221, 221);
 }
 
+.art{
+  border-bottom: 1px solid red;
+  width: 100%;
+}
+hr {
+  border-top: 1px solid #8c8b8b;
+}
 .article{
   padding:6px 0 6px 0;
   font:Bold 13px Arial;
@@ -15,10 +22,59 @@ body{
   padding:15px 15px 15px 15px;
   font:Bold 13px Arial;
   background:#EB6864;
+  /* background: linear-gradient(135deg, #e570e7 0%,#79f1fc 100%); */
   color:#fff;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
   border-radius:2px;
   border:none;
 }
+
+
+.addButton {
+
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.addButton:hover span {
+  display: none;
+}
+.addButton:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #e570e7 0%,#79f1fc 100%);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.addButton:hover, .addButton:focus, .addButton:active {
+  color: white;
+}
+.addButton:hover:before, .addButton:focus:before, .addButton:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
 .contenu {
   min-height: 800px;
 }
@@ -53,14 +109,14 @@ body{
   background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3)
 }
 .modal-header h4{
-    color: white;
-    font-size: 30px;
-    font-family: 'Indie Flower', cursive;
+  color: white;
+  font-size: 30px;
+  font-family: 'Indie Flower', cursive;
 }
 .modal-body ul li{
   list-style-type: none;
 }
-html{
+html, .articleImg{
   cursor: url("../img/cursor.png"),pointer;
 }
 
@@ -120,6 +176,12 @@ html{
   border: transparent;
   color: white;
 }
+
+#myCart .modal-body ul{
+  border-top: 2px black solid;
+  padding-top: 10px;
+}
+
 h1 {
   transform: translate(-50%, -50%);
   font-family: 'Pacifico', cursive;
@@ -128,6 +190,7 @@ h1 {
 
   .rainbow {
     animation: animated-rainbow-shadow 1s infinite; }
+
 
     @keyframes animated-rainbow-shadow {
       0% {text-shadow: 0px 0px transparent, 1px 1px #19F, 2px 2px #19F, 3px 3px #EA0, 4px 4px #EA0, 5px 5px #E62, 6px 6px #E62, 7px 7px #E62, 8px 8px #C25, 9px 9px #C25, 10px 10px #19F; }

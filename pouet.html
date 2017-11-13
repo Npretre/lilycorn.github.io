@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    .my_div {
+      background-color: red;
+      transition: all 50ms ease-in-out;
+      width: 100px;
+    }
+    .my_div:hover {
+      background-color: green;
+    }
+    h1 {
+      overflow: hidden;
+      font-size: 12px;
+    }
+    .old-text,
+    .new-text {
+      display: block;
+      overflow: hidden;
+      transition: all 500ms ease-in-out;
+    }
+    .old-text {
+      height: auto;
+      opacity: 1;
+      width: auto;
+    }
+    .new-text {
+      color: #fff;
+      height: 0;
+      opacity: 0;
+      width: 0;
+    }
+    .my_div:hover .old-text {
+      height: 0px;
+      opacity: 0;
+      width: 0px;
+    }
+    .my_div:hover .new-text {
+      height: auto;
+      opacity: 1;
+      width: auto;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="my_div">
+  <h1 class="title">
+        <span class="old-text">Ca vous plait ?</span>
+        <span class="new-text">Ajoutez le au panier</span>
+     </h1>
+</div>
+  </body>
+</html>
