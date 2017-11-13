@@ -1,5 +1,5 @@
-body{
-  background-color: rgb(228, 221, 221);
+p{
+  color: black;
 }
 
 .art{
@@ -80,6 +80,8 @@ hr {
 }
 .bottomDiv {
   background-color: #EB6864;
+  position: absolute;
+  width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -185,7 +187,7 @@ html, .articleImg{
 h1 {
   transform: translate(-50%, -50%);
   font-family: 'Pacifico', cursive;
-  font-size: 30px;
+  font-size: 35px;
   color: #eee; }
 
   .rainbow {
